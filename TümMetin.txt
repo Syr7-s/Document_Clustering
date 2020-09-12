@@ -1,0 +1,196 @@
+ipv6
+prof dr resul kara
+ipv6  1990lı yılların başlarından itibaren i̇nternetin hızla genişlemesi eklenen uç
+sayısı ve çeşitliliğinde gözlenen artış nedeniyle i̇nternet protokolü sürüm 4 ipv4ün i̇nternete bağlanacak cihazların adreslemesi için yetersiz kalacağı ve yeni bir adresleme sistemine geçişin zorunlu olacağı vurgulanmaya başlanmıştır
+ bu kapsamdaki çalışmalar ietf internet engineering task force önderliğinde başlamış ve yeni protokolün ipng internet protocol next generation veya i̇nternet protokolü sürüm 6 ipv6 olarak adlandırılması kararlaştırılmıştır yeni i̇nternet protokolünün standartları 1998 yılı sonunda yayınlanan rfc 2460 belgesinde tanımlanmıştır
+ ipv4ün 32bitlik adres yapısı teorik olarak 4 milyardan fazla 2324294967296 kullanılabilir adres sunmaktadır ancak pratikte verimsiz adres atama mekanizmalarından dolayı etkin adres sayısı bu sayıya hiçbir zaman ulaşamamaktadır
+ 128bitlik bir adres yapısına sahip olan ipv6 ise teorik olarak 340 trilyondan fazla 2128340282366920938463463374607431768211456 i̇nternet adresi sunmaktadır
+ipv4ün eksiklikleri  i̇nternetin her geçen gün artan bir hızla büyümesi ve i̇nternete bağlı cihaz
+sayısının artması nedeniyle ipv4 adres uzayı yetersiz kalmıştır bu sıkıntıyı aşmak için pek çok kurum ağ adresi çevirimi network address translation nat gibi adres dönüştürücü mekanizmaları kullanmayı seçmiştir uçtan uca adresleme sağlayamayan ipv4 i̇nternet üzerinden sunulan servis çeşitliliğinin artması ve bazı servislerin nat arkasındaki kullanıcılara ulaştırılmasında yaşanan işletim zorlukları gibi nedenlerle ihtiyaçları karşılamakta yetersiz kalmıştır
+ ipv4 adres uzayı hiyerarşik adresleme yapılmasına olanak sağlayamamıştır bu durum yönlendirici cihazlarının yönlendirme tablolarının büyümesine yol açmıştır
+ ipv6 için geliştirilen ancak daha sonra ipv4 için de uyarlanan ipsec standardının kullanımı ile güvenlik altyapısı sağlanabilmektedir ancak özellikle nat kullanılan ipv4 ağlarında bu standardın kullanımı sorunlara sebep olmaktadır
+ipv4ün eksiklikleri  ipv4 adres yapılandırması statik olarak veya dhcp kullanarak
+yapılabilmektedir ancak ip adresleri gereksiniminin artması nedeniyle yeni bir otomatik yapılandırma yöntemi geliştirilmesine ihtiyaç duyulmuştur
+ gerçek zamanlı veri aktarımında ipv4 paket başlığında bulunan servis tipi type of service tos alanı kullanılarak belli bir servis kalitesi quality of service sağlanabilmektedir ancak tos alanı kullanımı kısıtlıdır ve şifreli aktarımlarda sorun yaratmaktadır
+ipv6nın avantajları  genişletilmiş adres alanı ipv6nın en önemli özelliklerinden biri 128
+bitlik adres uzunluğu ile ipv4e göre daha büyük bir adres alanı sunmasıdır ipv6daki bu geniş adres alanı hiyerarşik adresleme yapılmasına olanak sağlayarak yönlendirme tabloları boyutlarının küçülmesini sağlayacaktır
+ yeni güvenlik özellikleri ipv6 güvenlik konusunda da bazı
+üstünlüklere sahiptir öncelikle i̇nternet protokol güvenliği internet protocol security ipsec desteği ipv6da bütünleşik olarak gelmektedir bu bütünleşme ile servislerin daha sorunsuz ve etkin çalışması sağlanmaktadır
+ güvenlik için tanımlanmış ek başlıklar ile yetkilendirme ve şifreleme yapılabilmektedir ayrıca ipv6da ara düğümlerde paketlerin parçalanmadan aktarılması yeni başlık yapısı ile ağ üzerinde paketlerin izlenmesinin kolaylaşması gibi güvenlik bütünlüğünü sağlayan yeni özellikler de mevcuttur
+ipv6nın avantajları  sadeleştirilmiş başlık yapısı ipv6 paketleri yönlendiriciler tarafından daha
+hızlı işlenebilmelerine olanak sağlayan sabit uzunlukta yeni bir başlık yapısına sahiptir ipv4 başlığındaki gereksiz bazı alanlar atılmış bazıları ise isteğe bağlı kullanım için uzantı başlıkları kısmına kaydırılmıştır
+ gelişmiş servis kalitesi özellikleri i̇nternet protokolü doğası gereği farklı uygulamaların hepsini en iyi çaba best effort yaklaşımı ile fark gözetmeksizin ele alır bu durum uçtan uca gecikme veya paket kayıpları gibi parametrelere karşı duyarlı olan trafik için problemlere yol açabilmektedir
+ otomatik adres yapılandırılması otomatik adres yapılandırılması ipv6nın getirmiş olduğu önemli yeniliklerdendir ipv6 ağ üzerinde adres atama sunucusu olmaksızın ağa bağlı arabirimlerin adres edinmelerine olanak tanır bu özelliğin temelinde ağdaki yönlendiricilerin gerekli adres önekini anons etmeleri ve istemcilerin de bu bloğa 64 bitlik bir değer ekleyerek kendi adreslerini oluşturmaları yatar bu şekilde oluşturulan adreslerin kullanılmadan önce tekillik testinden duplicate address detection mechanism geçirilmesi gerekir düğümler başkaları tarafından kullanılmadığına kanaat getirdikleri adresi kullanıma alabilir
+ipv6nın avantajları  dolaşılabilirlik dolaşılabilirlik bir istemcinin farklı ağlardan gerçek ev
+adresi ile bağlantı yapabilmesidir   genişletilebilirlik ipv6da zorunlu başlık alanının dışında bulunan ve isteğe
+bağlı kullanılabilen uzantı başlıkları bölümü ileride ihtiyaç duyulabilecek yeni özellikler için kullanılabilir
+  komşu düğümlerle etkileşim i̇çin yeni protokol ipv6 ağlarında aynı
+bağlantı üzerindeki komşu düğümlerin etkileşimini yönetmek için yeni bir protokol olan komşu keşfi neighbor discovery protokolü kullanılır bu protokol internet control message protocol for ipv6 icmpv6 mesajlarını kullanır
+ipv6 adres mimarisi  128 bitlik ipv6 adresleri onaltılık sayı düzeni kullanılarak gösterilir  örnek bir adres
+001000000000000100001101101110000000000000000000000000000000 000000000010101010100000000011111111111111100010100010011100 01011010
+ 128 bit olan bu ipv6 adresi öncelikle 16 bit uzunluğunda 8 gruba ayrılmıştır  0010000000000001 0000110110111000 0000000000000000
+0000000000000000 0000001010101010 0000000011111111 1111111000101000 1001110001011010
+ her grup onaltılık sayı düzenine dönüştürülür ve ipv6 adresi ile ayrılan 16 bitlik bloklar halinde yazılır
+ 20010db80000000002aa00fffe289c5a
+ipv6 adreslerinin kısaltılması  her 16 bitlik blokta solda kalan sıfırlar adresten atılabilir  2001db8002aafffe289c5a   tamamı sıfırdan oluşan bloklar fazladan bir adet daha
+kullanılarak adresten çıkarılabilir ancak bir ipv6 adresinde en fazla 1 kez kullanılabilir bu nedenle ipv6 adresinden 1den fazla blok çıkarılabilmesi için bu blokların yan yana olması zorunludur
+ 2001db82aafffe289c5a
+adres sınıfları var mı  ipv6da ipv4ten farklı olarak adres aralığını belirleyen
+a b ve c gibi sınıflar tanımlanmamıştır ipv6 adresleri için cidr classless interdomain routing gösterimi kullanılmaktadır
+ bu gösterimde ipv6 adresinde ağ adresini belirleyen bit sayısı adres sonunda işareti kullanılarak verilmektedir yönlendirici cihazlar ipv6 paketlerini yönlendirme işleminde ağ adresini belirleyen bu bitleri kullanmaktadır
+ 2001db82aafffe289c5a 32
+ipv6 adres tipleri  tekil gönderim ipv6 adresleri tekil gönderim adresleri tek bir ağ
+arayüzünü tanımlamak için kullanılmaktadır bu tip bir adresi hedefinde bulunduran paketler tek bir arayüzüne iletilmektedirler
+  çoklu gönderim multicast adresleri bu tip adresler farklı
+arayüzlerden oluşturulmuş bir grubu tanımlamak için kullanılmaktadır hedefi çoklu gönderim adresi olan paketler gruba dâhil olan tüm arayüzlere iletilmektedir
+  herhangi birine gönderim anycast adresleri herhangi birine
+gönderim adresleri de çoklu gönderim adresleri gibi farklı arayüzlerden oluşturulmuş bir grubu tanımlamaktadır herhangi birine gönderim adresine yönlenmiş bir paket çoklu gönderimden farklı olarak sadece grubun en yakındaki üyesine iletilir bu adres tipleri özellikle yük dağılımı uygulamalarında kullanılır aynı servisi veren birden fazla sunucu bulunması durumunda bu sunucuları aynı gruba dâhil ederek istemcilerin kendilerine en yakının sunucudan servis alması sağlanabilir
+ipv6 adres tipleri  ipv6 adresleri biçim önek format prefix olarak adlandırılan ilk bitlerine
+göre sınıflandırılmaktadır başlangıç olarak ipv6 adres aralığının yaklaşık 15lik kısmı için kullanım alanı ataması yapılmıştır geriye kalan adres aralıkları ilerideki ihtiyaçlar doğrultusunda kullanılacak olup atama daha sonra yapılacaktır
+ipv6 adres tiplerirezerve  rezerve edilmiş aralık rezerve edilmiş durumda olan 08 aralığı aşağıda
+açıklanan özel  ipv6 adresleri için kullanılmaktadır  belirsiz adres unspecified address 00000000 veya şeklinde
+gösterilen ve ipv4teki karşılığı 0000 olan adrestir belirsiz adres herhangi bir cihaza verilemez bu adres genelde soket bağlantılarında kullanılmaktadır
+ yerel i̇stemci adresi loopback address 00000001 veya 1 şeklinde gösterilmektedir bu adresin ipv4teki karşılığı 127001dir kaynağı veya hedefi bu olan adresler göndericiden ayrılamaz
+ ipv4 eşlemli ipv6 adresleri ipv4mapped addresses ffff0096 aralığı içerisinde yer alan ipv6 adresleridir bu adres aralığı ipv4 ve ipv6 paket başlıkları arasında rfc 2765 ile tanımlanan sitt stateless ipicmp translation algoritmasını kullanarak dönüşüm sağlamak için ayrılmıştır bu algoritma sadece ipv6 adresine sahip arayüzlerin sadece ipv4 adresine sahip arayüzler ile iletişimini sağlamak için kullanılmaktadır adres dönüşümünde kullanılan ipv4 adresinin küresel olarak yönlendirilebilen adresler olması gerekmektedir
+ipv6 adres tipleriküresel tekil  küresel tekil gönderim adresleri 001 biçim önekine sahip ve
+arayüzlerin küresel bağlantısı için zorunlu olan adreslerdir bu adresler ip adresi dağıtımı ve koordinasyonu ile görevli merci olan internet assigned numbers authority iana tarafından avrupa kuzey amerika latin amerika afrika ve asya bölgesel ip adresi dağıtım yetkililerine ihtiyaç duyan kurumlara tahsis edilmek üzere dağıtılmıştır dolayısıyla bu adresler doğrudan ip adresi dağıtım yetkilisi olan kuruluşlardan veya hizmet alınan i̇nternet servis sağlayıcısı kurumdan alınabilir
+ biçim öneki ve küresel yönlendirme öneki kısımlarından oluşan ilk bölümün bit uzunluğu değişebilmektedir ip dağıtım yetkilisi tarafından i̇nternet servis sağlayıcı olmayan kurumlara tahsis edilen bu bitlerin sayısı genellikle 48dir bu bölümü takip eden alt ağa tanıtıcı bölümü de değişken olmakla birlikte örnek için 16 bittir son bölüm olan arabirim tanıtıcısı ise genellikle 64 bitliktir
+ipv6 adres tipleriküresel tekil  küresel tekil gönderim adresleri arasından yer alan
+200132 adres aralığı ipv4 ve ipv6 arayüzleri arasında iletişim için kullanılan özel bir geçiş mekanizması olan teredo tünelleme yöntemi için ayrılmış durumdadır
+ 200216 aralığı 6to4 geçiş yöntemi için ayrılmıştır
+ipv6 adres tiplerieşsiz yerel tekil  eşsiz yerel tekil gönderim adresleri i̇lk 7 biti 1111110 şeklinde olan
+ve fc007 aralığında bulunan adreslerdir öncelikle ardından gelen l bitinin değeri 1 olan fd008 alt aralığı kullanılmaktadır l bitinin 0a eşit olduğu adresler henüz tanımlanmamıştır l bitinden sonraki 40 bit algoritma yardımıyla üretilen küresel tanıtıcı bölümünü oluşturmaktadır bu bölümü sırasıyla 16 bitlik alt ağ tanıtıcısı ve 64 bitlik arabirim tanıtıcısı takip etmektedir
+ eşsiz yerel tekil gönderim adresleri yerel ağ trafiği için geliştirilmiş olup küresel olarak yönlendirilmezler
+ipv6 adres tipleribağlantı yerel tekil
+ bağlantı yerel tekil gönderim adresleri 1111 1110 10 biçim önekine sahip ve fe80 ile başlayan adreslerdir biçim önekini takip eden 54 bit 0 olup onları takip eden ve arabirim tanıtıcısı olan son 64 bit ise arabirimin 48 bitlik donanım adresinin tam ortasına 16 bitlik fffe değeri eklenerek oluşturulur
+ bağlantı yerel tekil gönderim adresleri sadece bir arayüz bağlantısı üzerinde otomatik adres yapılandırılması veya komşu keşfi gibi amaçlar ile kullanılan yerel adreslerdir
+ipv6 adres tipleriçoklu gönderim  çoklu gönderim adresleri ff008 ipv6 öneki çoklu gönderim adresleri
+için tahsis edilmiştir şekil 5te bu adreslerin yapısı ayrıntılı olarak verilmiştir
+ipv6 adres tipleriçoklu gönderim  11111111 olan ilk 8 bit sonrasında adresin tipini belirleyen bayrak ve kapsam
+bitleri  gelmektedir  bayrak bitleri aşağıdaki değerleri alabilir
+ 4 bitin ilki ileriki kullanım için rezerve edilmiştir ve 0 değerini almalıdır  i̇kinci bit r çoklu gönderim adresinin içinde gömülü olarak randevu noktası rendezvous point
+adresi içerdiğini belirtir  üçüncü bitin 1 olması çoklu gönderim adresinin tekil gönderim öneki tabanlı çoklu gönderim adresi
+olduğunu ve ağ adresinden türetildiğini göstermektedir üçüncü bitin 1 olması durumunda 4 bit de 1 olarak set edilir
+ dördüncü bitin t 0 olması ipv6 çoklu gönderim adresinin kalıcı 1 olması ise kalıcı olmayan geçiş için veya dinamik olarak atanmış bir adres olduğunu gösterir
+ kapsam bölümündeki bitlerin değeri 1 ise adres arayüzyerel bir adrestir  kapsam bölümündeki bitlerin değeri 2 ise adres bağlantıyerel bir adrestir  kapsam bölümündeki bitlerin değeri 4 ise adres yöneticiyerel bir adrestir  kapsam bölümündeki bitlerin değeri 5 ise adres siteyerel bir adrestir  kapsam bölümündeki bitlerin değeri 8 ise adres organizasyonyerel bir adrestir
+ipv6 başlık yapısı  ipv6 da ipv4ün hantal olan başlık yapısı revize edilmiş
+gereksiz olan ya da görevleri üst katmanlara devredilebilen kısımlar çıkarılmıştır
+ ipv6nın daha yalın bu başlık yapısı ile ağ cihazlarının işlem gücünden tasarruf edilmesi amaçlanmıştır
+ sabit uzunluğa sahip temel bir başlık oluşturulmuş ve günümüz ağlarının gereksinimlerini karşılamak için bu başlık içerisinde yer alan adres bilgisi ile ilgili kısım genişletilmiştir
+ temel başlığı ile üst seviye başlıklar arasında yer alan ve ipv6 uzantı başlıkları adını taşıyan yeni bir bölüm tanımlanmıştır bu yeni bölüm ipv6 ile gelen en önemli özelliklerden biridir bu bölümde bütün cihazlar tarafından işlenmesine gerek olmayan paket ile ilgili ek bilgiler taşınabilmektedir böylece temel başlık bölümünde sadece gerekli bilgilerin yer alması sağlanmıştır
+ipv6 başlık yapısı  her iki protokolde de bulunan 4 bitlik sürüm bölümü kullanılan protokolün
+sürümünü belirtmektedir bu bölüm ipv4 için 4 ipv6 için 6 değerini almaktadır  ipv4 veri paketleri 20 ile 60 bayt arasında değişen ipv6 veri paketleri ise 40 baytlık
+sabit uzunlukta başlık bilgisine sahiptir bu nedenle ipv4 başlığında bulunan ve adres bilgisinin uzunluğunu belirten 4 bitlik toplam uzunluk bölümü ipv6da kaldırılmıştır sabit uzunluktaki başlık ağ cihazlarında başlık uzunluğunun algılanması için harcanan zamandan ve işlem gücünden tasarruf edilmesini sağlamaktadır
+ servis tipi ve trafik sınıfı alanları her iki başlık için de aynı işleve sahiptir öncelik
+ atama ve servis kalitesi quality of service gibi fonksiyonlar için kullanılmaktadırlar
+ akış etiketi kısmı ipv6yla getirilen yeni bir özelliktir ipv6 da tercihli olarak  kullanılabilen bu bölümle beraber gerçek zamanlı verilerin bu bölümdeki etiketlere
+bakılarak hızlı bir şekilde yönlendirilmesi ya da mpls multi protocol label switching gibi alt katmandaki teknolojilerin verimli kullanılması mümkün olmaktadır
+ipv6 başlık yapısı  ipv6nın adres başlık yapısındaki en önemli değişiklerinden biri de yönlendirici
+gibi ara elemanlarda parçalama fragmentation ve hata kontrolü yapılmamasıdır bu görevler bir üst seviyedeki protokol olan tcpye bırakılmıştır bu değişiklik sayesinde bu işlevleri yerine getirmekte kullanılan tanıtım bayraklar parça telafisi ve başlık sağlama toplamı bölümleri ipv6da yer almamaktadır
+ 8 bitlik yaşam süresi ve sıçrama limiti bölümleri farklı adlandırılmış olsalar da aynı işlevi görmektedirler bu bölüm bir veri paketinin bilgisayar ağları üzerinde ne kadar süre kalacağına karar vermek için kullanılmaktadır
+ bir diğer 8 bitlik adres alanı olan sonraki başlık ise bir üst katmanda kullanılacak protokolü belirtmektedir bu alan aynı zamanda ipv6ya ek özellikler getirebilen uzantı başlıklar extension headers kısmı ile ilgili bilgiler de taşıyabilmektedir ipv6ın sunduğu ek özelliklerden olan ve ihtiyaç anında tercihe bağlı olarak kullanılabilecek uzantı başlıklar kısmı standart ipv6 başlık yapısının dışına çıkarılarak ağ cihazlarının paketleri daha hızlı yönlendirmesi sağlanmıştır
+ipv6 extension headers uzantı başlıkları
+ ipv6 da paketlerle ilgili tercihe bağlı bilgiler temel başlık ile üst seviye protokol başlıkları arasında yer alan ipv6 uzantı başlıkları bölümünde yer alır
+ bu uzantı başlıkları temel başlık bilgisinden sonra ihtiyaç duyulduğunda kullanılır
+ biri hariç uzantı başlıklarının hepsi sadece ipv6 paketi için hedef olarak belirlenen cihaz tarafından işlenir
+ uzantı başlıkları bölümünde bulunacak başlık sayısı ile ilgili bir kısıtlama yoktur ancak yer alan bütün başlıklar sonraki başlık değeri ile tanımlanmalıdır
+ cihazlar bu değerler sayesinde işlenmesi gereken uzantı başlığı olup olmadığını öğrenir yoksa üst protokol başlığı ile ilgili işlemlere devam eder
+ipv6 extension headers uzantı başlıkları
+ uzantı başlıkları boyut açısından değişkenlik gösterirler  eğer bir paket için birden fazla uzantı başlığı
+kullanılıyorsa bu başlıklar şu sırada olmalıdır  sıçrama seçenekleri başlığı hopbyhop options header  hedef seçenekleri başlığı destination options header  yönlendirme başlığı routing header  parçalama başlığı fragment header  doğrulama başlığı authentication header  kapsüllenmiş güvenlik yük başlığı encapsulating security
+payload header  hedef seçenekleri başlığı destination options header  dolaşılabilirlik başlığı mobility header  üst protokol başlığı upperlayer header
+ipv6 extension headers uzantı başlıkları
+ipv6 extension headers uzantı başlıkları
+üst katman protokolleri için taımlanan sonraki başlık değerleri
+icmpv6  i̇nternet kontrol mesajlaşma protokolü internet control message
+protocolicmp mesajları ağ iletişiminde yaşanan sorunların iletişime dâhil olan ağ bileşenlerine iletilmesi amacıyla kullanılır
+ bir paket hedefine ulaştırılamadığında bir yönlendiricinin kendisine gelen bir paketi yönlendirecek kadar boş kapasitesi olmadığında ya da bir paket için belirlenen rotadan daha kısa bir rotanın varlığı keşfedildiğinde icmp mesajları ile bu durum bildirilir
+ ipv4 tabanlı iletişimde icmp mesajları sınır yönlendiricilerinde engellenir bunun temel nedeni icmpnin saldırganlar tarafından keşif aşamalarında kullanılmasıdır
+ icmpv6 aynı protokolün ipv6 için uyarlanmış halidir  icmpv6 tüm ipv6 düğümlerinin iletişimleri için temel bir protokol
+olarak tasarlanmıştır ve rfc 2463e göre bu düğümler icmpv6yı eksiksiz desteklerler
+icmpv6
+ ipv6 paketinde üst protokolü tanımlayan sonraki başlık değeri 58 ise bu paket bir icmpv6 mesajı taşır
+ icmpv6 bilgileri iki bölümde taşınır  i̇lk 32 bit başlık bölümünü oluşturur başlığın ilk 8 biti mesajın tipi ile ilgili
+bilgiyi taşır eğer en anlamlı bit 0 ise 0127 arası değerler için bu bir hata mesajıdır eğer en anlamlı bit 1 ise 128255 arası değerler için bu bir bilgi mesajıdır 8 bitlik kod alanı içeriği mesaj tipine bağlıdır 16 bitlik sağlama toplamı alanı icmp paketi için minimum seviyede bütünlük doğrulaması yapar
+ sonraki bitler ise protokol yükü için kullanılır
+komşu keşfi neighbour discovery  komşu keşfi protokolü ipv6nın önemli parçalarından birisidir  ipv4de kullanılan yönlendirici keşfi router discoveryrdisc
+adres çözümleme protokolü address resolution protocolarp ve icmp yeniden yönlendirme bileşenlerinin görevleri ipv6da komşu keşfi tarafından yapılır
+ ipv6da düğümler aynı ağda bulundukları komşularıyla komşu keşfi protokolü ile sürekli iletişim halinde bulunurlar
+ düğümler şu amaçlar için komşu keşfi mesajlarını kullanırlar  ağdaki diğer düğümlerin bağlantı yerel linklocal adreslerini
+öğrenmek  komşuların erişilebilirlik durumların tespit etmek  ağ üzerindeki yönlendiricileri sorgulamak  yönlendiricilerden ağ yapılandırma bilgilerini elde etmek
+komşu keşfi neighbour discovery  tanımlanmış 5 farklı komşu keşfi mesajı vardır
+ yönlendirici talep mesajı router solicitation rs düğümler tarafından ağa bağlı yönlendiricileri öğrenmek amacıyla kullanılır ağa bağlı yönlendiricilerin yönlendirici i̇lan mesajlarının periyodik güncelleme zamanını beklemeden yollamasını sağlar
+ yönlendirici i̇lan mesajı router advertisement ra ağa bağlı yönlendiriciler varlıklarını duyurmak ve ağa bağlanmak için gerekli parametreleri bildirmek için periyodik olarak ya da yönlendirici talep mesajına cevaben yönlendirici i̇lan mesajı yayınlarlar ağ öneki mtu büyüklüğü düğüm tarafından adres oluşturulurken hangi otomatik yapılandırma yönteminin kullanılabileceği varsayılan ağ geçidi ve geçerlilik süresi gibi bilgiler içerir
+ komşu talep mesajı neighbor solicitation ns bu mesaj ağa bağlı tüm düğümler tarafından diğer düğümlerin bağlantı katmanı adreslerinin linklayer bulunması ve daha önceden iletişim kurulmuş ve bağlantı katmanı adresleri komşu tamponuna neighbor cache eklenmiş komşuların erişilebilirliğinin kontrol edilmesi amacıyla kullanılır
+ komşu i̇lanı neighbor advertisement na komşu talep mesajına cevap olarak ya da düğümde oluşan bağlantı katmanı adresi değişikliğinin ilan edilmesi amacıyla yayınlanır
+ yeniden yönlendirme redirect yönlendiriciler tarafından düğümlere yollanır mesaj içeriğinde belirli bir hedef ipv6 adresi için daha iyi bir yönlendirme yolunun varlığı belirtilir
+komşu keşfi neighbour discovery
+komşu keşfi neighbour discovery  örnek şekle göre aynı yerel ağa bağlı a b c d düğümleri ve
+bunların ip adresleri görülüyor ağa yeni bağlanan düğüm e arayüz tanımlayıcısı ve ağ öneki yardımıyla oluşturduğu fe8013aa90 adresini kullanmak ister öncelikle bu adresin ağda kullanılıp kullanılmadığını kontrol etmek için bütün düğümlerin multicast gönderim adresine komşu talep mesajı gönderir talep mesajını alan düğümler eğer bu adresi kullanıyorlarsa bir ilan mesajıyla cevap verirler
+ a düğümü fe8013aa90 adresini kullandığı için tüm düğümlere bir ilan mesajı gönderir i̇lan mesajını alan e adres kullanıldığı için bu adresi kendi arayüzüne atayamaz bu durumda ya düğüme sistem yöneticisi tarafından bir adres verilir veya alternatif bir arayüz tanımlayıcısıyla yeni bir adres oluşturulup süreç tekrar başlatılır eğer talebe belirli bir süre cevap gelmezse e düğümü oluşturduğu adresi kullanmaya başlar
+ipv6 yapılandırması  ipv6 adreslerinin otomatik tanımlanması durum
+denetimli stateful veya durum denetimsiz stateless olmak üzere iki şekilde yapılabilir
+ durum denetimsiz otomatik adres yapılandırması ağ üzerinde bulunan yönlendiricinin ağa sürekli olarak gönderdiği bilgiler aracılığı ile yapılır
+ durum denetimli otomatik adres yapılandırması ise dhcpv6 kullanılarak yapılabilir
+ otomatik adres tanımlamanın yanı sıra istemcilere statik olarak ipv6 adreslerinin tanımlanması da mümkündür
+ipv6 yapılandırması
+ otomatik adres yapılandırmasında önemli görev yönlendirici i̇lan mesajındadır
+ mesaj içinde bulunan m ve o bitleri managed address configuration flag other configuration flag istemcilere adres yapılandırması ve dns sunucu bilgisi gibi ek parametreleri elde etmek için durum denetimsiz ve durum denetimli adres yapılandırma yöntemlerinden hangisini kullanabilecekleri konusunda bilgi içerir
+ m ve o bitlerinin değerlerine göre istemcilere farklı bilgiler aktarılır her iki bit için varsayılan değerler sıfırdır
+router ilan mesajı
+ipv6 yapılandırması  her iki bitin değeri sıfır ise m 0 ve o0
+ i̇stemci adres yapılandırması için durum denetimsiz otomatik adres yapılandırma kullanır ek parametreleri diğer yöntemler statik yapılandırma ile elde eder
+ m bitinin değeri sıfır o bitinin değeri bir ise m 0 ve o1  i̇stemci adres yapılandırması için durum denetimsiz otomatik adres
+yapılandırma kullanır ek parametreleri durum denetimli otomatik adres yapılandırma yöntemi ile elde eder
+ m bitinin değeri 1 o bitinin değeri sıfır ise m1 ve o0  i̇stemci adres yapılandırması için durum denetimli otomatik adres
+yapılandırma yöntemi kullanılır ek parametreleri diğer yöntemler statik yapılandırma ile elde eder
+ m1 ve o1 ise dhcpv6 statefull  i̇stemci adres yapılandırması ve ek parametreleri durum denetimli
+otomatik adres yapılandırma yöntemini kullanarak elde eder
+ipv6 yapılandırması  i̇stemciler durum denetimsiz otomatik adres yapılandırma
+yönteminde yönlendirici i̇lan mesajları ile duyurulan ağ önek bilgisini kendi adreslerini oluşturmak için kullanmadan önce mesaj içerisindeki özerklik bayrağının autonomous flag değerini kontrol ederler
+ bu bayrak için varsayılan değer 1 olup ağ önek bilgisinin adres yapılandırması için kullanılabileceğini gösterir
+ bayrak değeri 0 ise istemciler ilgili yönlendirici i̇lan mesajındaki ağ önek bilgisini bu işlem için kullanmaz
+ özellikle durum denetimli adres yapılandırma yöntemi kullanılan ağlarda yönlendirici ilan mesajlarındaki bu bayrağın değeri sıfır olarak tanımlanmalıdır
+ aksi takdirde istemciler hem durum denetimli hem de durum denetimsiz otomatik adres yapılandırma yöntemlerini kullanarak iki farklı global ipv6 adresi alırlar
+durum denetimsiz otomatik ipv6 yapılandırması
+ bu yöntemde ağa bağlanan düğümlerin kullandıkları ipv6 adresleri bir sunucu veya otorite tarafından belirlenmez ve kayıt altına alınmaz
+ i̇stemci ile router arasındaki iletişim şöyle gerçekleşir  i̇stemci kendi bağlantı yerel adresini kullanarak yönlendirici
+talep mesajını ağdaki bütün yönlendiricileri temsil eden multicast gönderim adresine iletir
+ talep mesajını alan yönlendirici ağ katmanındaki yapılandırma parametrelerini içeren yönlendirici ilan mesajı ile cevap verir
+ bu bilgiyi alan istemci kendi arabirim tanıtıcısını yönlendiriciler tarafından anons edilen önek ile birleştirerek global ipv6 adresini oluşturur
+durum denetimsiz otomatik ipv6 yapılandırması
+ i̇stemci arabirim tanıtıcısını oluştururken 48 bitlik mac adreslerini kullanır  arabirim tanıtıcısı düğümlerin ağ arayüzlerinin 48 bitlik mac adreslerinin tam
+ortasına 0xff ve 0xfe değerleri eklenerek oluşturulur ayrıca mac adresinin 7 biti kontrol amacıyla çevrilir
+ ağ üzerinde yönlendirici i̇lan mesajı anonsu olmaması durumunda düğümler bağlantı yerel adreslerini oluşturarak aynı ağa bağlı diğer düğümlerle iletişim kurabilirler durum denetimsiz otomatik adres yapılandırmasının bu özelliği ipv6 ağlarında takçalıştır yönteminin işlerliğini sağlamaktadır
+durum denetimli otomatik ipv6 yapılandırması
+ düğümler ipv6 adreslerini ve ağa bağlanmak için gerekli diğer parametreleri ağa bağlı bir sunucudan edinirler
+ sunucu dağıttığı ipv6 adresleri ile ilgili bir veri tabanı tutarak durum denetimi gerçekleştirir  durum denetimli adres yapılandırılması dhcpv6 aracılığı ile yapılabilir  ipv6 ağlarında dhcp kullanılmasını gerektirecek durumlar
+ ağ tasarımında yönetme izleme gibi sebeplerle kullanılan adreslerin kontrol edilmesine ihtiyaç duyulması  bazı ek yapılandırma bilgilerinin istemcilere ulaştırılması ihtiyacı dns sip vb
+ dhcp multicast adresleri kullanarak istemcinin dhcp sunucusuna talebini iletmesine ve sunucunun istemciye gerekli ağ yapılandırma bilgilerini göndermesine olanak sağlar
+ dhcp istemcisi ile aynı ağda bulunmayan dhcp sunucularına mesajların ulaştırılması da dhcp nakledici dhcp relay yapılandırması ile yine multicast adresleri kullanılarak uygulanır
+ kullanılan multicast adresleri  tüm dhcp sunucuların ve relay agentların bulunduğu ff0212 bağlantı yerel adresi  tüm dhcp sunucuların bulunduğu ff0513 site yerel adresi
+ durum denetimli otomatik adres yapılandırması yöntemi ile varsayılan ağ geçidi bilgisi istemcilere iletilmez i̇stemciler yönlendirici ilan mesajı aldıkları cihazın ipv6 adresini varsayılan ağ geçidi olarak kaydederler
+cisco router otomatik yapılandırma örnekleri
+adres yapılandırması m ve o ve özerklik autonomous bayrakları
+ m biti varsayılan değeri 0dır değeri 1 yapmak için  routerconfigifipv6 nd managedconfigflag
+ o biti varsayılan değer 0dır değeri 1 yapmak için  routerconfigifipv6 nd otherconfigflag
+ a biti varsayılan değer 1dir değeri 0 yapmak için  routerconfigifipv6 nd prefix 2001db81264 noautoconfig
+cisco router otomatik yapılandırma örnekleri
+yönlendirici i̇lanı için temel yapılandırma interface gigabitethernet01 ipv6 address 2001db812164 ipv6 enable ipv6 nd prefix 2001db81264
+cisco router otomatik yapılandırma örnekleri
+dhcpv6 stateless temel yapılandırma ipv6 dhcp pool ipv6dns dnsserver 2001db8ab1 dnsserver 2001db83000300042 domainname duzceedutr
+interface ethernet00 i̇pv6 enable ipv6 address 2001db812164 ipv6 nd otherconfigflag ipv6 dhcp server ipv6dns
+cisco router otomatik yapılandırma örnekleri
+dhcpv6 statefull temel yapılandırma ipv6 local pool vlan10 2001db8148 64
+ipv6 dhcp pool dhcpv6havuz prefixdelegation 2001db8123f633ba64 00030001000e84244e70 prefixdelegation pool vlan10 dnsserver 2001db8119 domainname duzceedutr
+interface fastethernet00 ipv6 address 2001db81164 ipv6 address fe801 linklocal ipv6 nd managedconfigflag ipv6 nd otherconfigflag ipv6 dhcp server dhcpv6havuzu rapidcommit preference 1 allowhint
+statik adres yapılandırma  cisco
+interface gigabitethernet01 ipv6 address 2001db821164 ipv6 enable
+ freebsd sbinifconfig fxp0 inet6 2001db821264 sbinroute add inet6 default 2001db8211
+ linux sbinifconfig eth0 add 2001db821264 sbinroute add inet6 default gw 2001db8211
+statik adres yapılandırma  windows xp
+ windows xp işletim sisteminde grafik arayüzü kullanılarak ipv6 adresi ataması yapılamaz
+ komut satırından girilebilecek netsh interface ipv6 install komutu ile ipv6 desteği yüklenir ardından komut satırı kullanılarak ipv6 adres ve varsayılan ağ geçidi atama işlemi yapılır
+netsh interface ipv6 install netsh interface ipv6 set address local area connection 2001db8211
+ windows 7  ipv6 desteği kurulumda otomatik olarak gelir ipv6 ayarları
+grafik arayüz veya komut satırı ile yapılabilir netsh interface ipv6 set address local area
